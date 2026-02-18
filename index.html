@@ -1383,8 +1383,8 @@
     // START / END
     // ───────────────────────────────────────────────
     function startGame() {
-      const un = document.getElementById('username-input').value.trim();
-      if (!un) { document.getElementById('username-input').focus(); return; }
+      const inp = document.getElementById('username-input');
+      const un = inp.value.trim() || 'Pilot'; // Default to Pilot
       gs.username = un; gs.score = 0; gs.lives = 3; gs.wave = 1; gs.activeMeteor = null; gs.meteorQueue = []; gs.bullets = []; gs.particles = []; gs.running = true; gs.lastTime = 0; gameTime = 0;
       resizeCanvas(); updateLives(); updateScoreDisplay(); document.getElementById('level-display').textContent = '1';
       document.getElementById('welcome-screen').classList.add('hidden');
