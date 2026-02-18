@@ -710,6 +710,14 @@
       border-color: var(--accent);
       color: var(--accent);
     }
+
+    @media (max-width: 768px) {
+
+      #onscreen-keyboard,
+      #toggle-arrow {
+        display: none !important;
+      }
+    }
   </style>
 </head>
 
@@ -792,6 +800,18 @@
   <div id="wave-announce">
     <div class="wave-text" id="wave-text">WAVE 1</div>
     <div class="wave-sub">INCOMING METEORS</div>
+  </div>
+
+  <!-- MENU CONFIRM OVERLAY -->
+  <div id="confirm-overlay" class="hidden">
+    <div id="confirm-box">
+      <div class="cb-title">⏸ PAUSE</div>
+      <div class="cb-sub">Return to menu?<br>Your progress will be lost.</div>
+      <div class="cb-btns">
+        <button class="cb-btn-yes" id="confirm-yes">YES, EXIT</button>
+        <button class="cb-btn-no" id="confirm-no">KEEP PLAYING</button>
+      </div>
+    </div>
   </div>
 
   <script>
@@ -1478,17 +1498,7 @@
 
   </script>
 
-  <!-- MENU CONFIRM OVERLAY -->
-  <div id="confirm-overlay" class="hidden">
-    <div id="confirm-box">
-      <div class="cb-title">⏸ PAUSE</div>
-      <div class="cb-sub">Return to menu?<br>Your progress will be lost.</div>
-      <div class="cb-btns">
-        <button class="cb-btn-yes" id="confirm-yes">YES, EXIT</button>
-        <button class="cb-btn-no" id="confirm-no">KEEP PLAYING</button>
-      </div>
-    </div>
-  </div>
+
 
 </body>
 
